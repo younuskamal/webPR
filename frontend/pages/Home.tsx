@@ -9,7 +9,7 @@ import Stats from '../components/home/Stats';
 import Testimonials from '../components/home/Testimonials';
 
 import WhyChooseUs from '../components/home/WhyChooseUs';
-import SuccessNumbers from '../components/home/SuccessNumbers';
+
 
 const Home: React.FC = () => {
   // Intersection Observer for fade-in animations
@@ -36,7 +36,7 @@ const Home: React.FC = () => {
       <Features />
       <PackagesSection />
       <WhyChooseUs />
-      <SuccessNumbers />
+
       <Process />
       <Testimonials />
       <Partners />

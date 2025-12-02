@@ -15,11 +15,11 @@ const Footer: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-        if (window.scrollY > 300) {
-            setShowScroll(true);
-        } else {
-            setShowScroll(false);
-        }
+      if (window.scrollY > 300) {
+        setShowScroll(true);
+      } else {
+        setShowScroll(false);
+      }
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -30,12 +30,12 @@ const Footer: React.FC = () => {
     <footer className="bg-[#001835] text-white pt-16 md:pt-20 pb-10 border-t border-white/5 relative">
       <div className="container mx-auto px-4 md:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12 mb-12 md:mb-16">
-          
+
           {/* Brand & Desc */}
           <div>
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 bg-primary rounded flex items-center justify-center transform rotate-45">
-                 <div className="w-5 h-5 border-2 border-white"></div>
+                <div className="w-5 h-5 border-2 border-white"></div>
               </div>
               <div className="flex flex-col">
                 <span className="text-2xl font-bold tracking-wide">إتمام</span>
@@ -86,10 +86,10 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-bold mb-6 text-white">{t.footer.newsletter}</h3>
             <div className="flex gap-2 mb-8">
-               <input type="email" placeholder={t.footer.emailPlace} className="bg-white text-gray-800 px-4 py-2 rounded text-sm w-full focus:outline-none min-w-0" />
-               <button className="bg-secondary hover:bg-secondary-light text-white px-4 py-2 rounded text-sm font-bold whitespace-nowrap">{t.footer.subscribe}</button>
+              <input type="email" placeholder={t.footer.emailPlace} className="bg-white text-gray-800 px-4 py-2 rounded text-sm w-full focus:outline-none min-w-0" />
+              <button className="bg-secondary hover:bg-secondary-light text-white px-4 py-2 rounded text-sm font-bold whitespace-nowrap">{t.footer.subscribe}</button>
             </div>
-            
+
             <h3 className="text-lg font-bold mb-4 text-white">{t.footer.follow}</h3>
             <div className="flex gap-4">
               <a href="#" className="text-gray-400 hover:text-white transition-colors p-2 bg-white/5 rounded-full hover:bg-white/10"><Twitter size={18} /></a>
@@ -105,25 +105,31 @@ const Footer: React.FC = () => {
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500 text-center md:text-right">
           <p>{t.footer.commercial}</p>
           <div className="flex gap-4 items-center opacity-70 grayscale hover:grayscale-0 transition-all">
-             <span>VISA</span>
-             <span>Mastercard</span>
-             <span>Mada</span>
-             <span>ApplePay</span>
+            <span>VISA</span>
+            <span>Mastercard</span>
+            <span>Mada</span>
+            <span>ApplePay</span>
           </div>
         </div>
 
         <div className="mt-8 text-center text-xs text-gray-600">
-           {t.footer.rights}
+          <div className="flex flex-col md:flex-row items-center justify-center gap-1">
+            <span>{t.footer.rights}</span>
+            <span className="hidden md:inline">|</span>
+            <span className="flex items-center gap-1">
+              Powered by <a href="https://sourceplus.sa" target="_blank" rel="noopener noreferrer" className="text-secondary hover:text-white font-bold transition-colors">SourcePlus</a>
+            </span>
+          </div>
         </div>
       </div>
-      
+
       {/* Scroll to top button - FIXED and Interactive */}
-      <button 
-        onClick={scrollToTop} 
+      <button
+        onClick={scrollToTop}
         className={`fixed bottom-8 right-8 bg-secondary hover:bg-secondary-light text-white p-3.5 rounded-full shadow-2xl transition-all duration-300 z-[90] transform hover:-translate-y-1 hover:scale-110 ${showScroll ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'}`}
         aria-label="Scroll to top"
       >
-         <ArrowUp size={24} />
+        <ArrowUp size={24} />
       </button>
     </footer>
   );
