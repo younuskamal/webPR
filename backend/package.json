@@ -6,7 +6,8 @@
     "scripts": {
         "start": "node index.js",
         "dev": "nodemon index.js",
-        "seed": "node setupDb.js"
+        "seed": "node setupDb.js",
+        "setup:db": "node setupDb.js"
     },
     "dependencies": {
         "cors": "^2.8.5",
